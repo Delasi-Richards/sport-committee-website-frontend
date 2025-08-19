@@ -1,10 +1,18 @@
 @import "tailwindcss";
+
 @font-face {
   font-family: 'Gotham';
   src: url("./assets/fonts/Gotham-Light.otf") format('opentype');
 }
 
 @theme {
+  --spacing: 10px;
+
   --default-font-family: "Gotham", sans-serif;
 
+  --color-bg: #ffffff;
+  --color-red: #cc3634;
+  --color-grey: #575656;
+  --color-white: #ffffff;
+  --color-red-focus: #c0392b;
 }

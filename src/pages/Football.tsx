@@ -1,12 +1,12 @@
 import Navbar from "../components/Navbar"
 
-function Homepage() {
-
+function FootballPage() {
   return (
     <>
       <Navbar />
+      <p>Football page</p>
     </>
   )
 }
 
-export default Homepage
+export default FootballPage
