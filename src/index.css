@@ -2,7 +2,12 @@
 
 @font-face {
   font-family: 'Gotham';
-  src: url("./assets/fonts/Gotham-Light.otf") format('opentype');
+  src: url("./assets/fonts/Gotham-Book.otf") format('opentype');
+}
+
+@font-face {
+  font-family: 'Gotham-Medium';
+  src: url("./assets/fonts/Gotham-Medium.otf") format('opentype');
 }
 
 @theme {
