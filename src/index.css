@@ -20,4 +20,45 @@
   --color-grey: #575656;
   --color-white: #ffffff;
   --color-red-focus: #c0392b;
+
+  --radius-xl: 10px;
+}
+
+/* Text Styles */
+.text-small {
+  font-size: 16px;
+  color: var(--color-white);
+}
+.text-medium {
+  font-size: 20px;
+  color: var(--color-white);
+}
+.text-large {
+  font-size: 24px;
+  color: var(--color-white);
+}
+.text-xlarge {
+  font-size: 32px;
+  color: var(--color-white);
+}
+
+/* Carousel */
+.carouselButtonLeft,
+.carouselButtonRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  height: 32px;
+  width: 32px;
+  align-content: center;
+  justify-items: center;
+  background-color: var(--color-red);
+  border-radius: 5px;
+}
+.carouselButtonLeft {
+  left: 1%;
+}
+.carouselButtonRight {
+  right: 1%;
 }

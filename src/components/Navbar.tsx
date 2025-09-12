@@ -5,7 +5,7 @@ function Navbar() {
         <div className="ml-5 mr-9 items-center text-2xl">
           <img src="src/assets/navbar-logo.svg" width="32" height="32" />
         </div>
-        <ul className="flex gap-4 mr-auto text-base">
+        <ul className="flex gap-4 mr-auto text-medium">
           <li>
             <a href="/">Home</a>
           </li>
