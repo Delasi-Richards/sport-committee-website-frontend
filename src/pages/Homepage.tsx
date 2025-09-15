@@ -31,24 +31,31 @@ function Homepage() {
       teamB: "Team B",
       teamALogo: "https://picsum.photos/32",
       teamBLogo: "https://picsum.photos/33",
-      datetime: new Date("2024-04-13T08:30:00Z")
+      datetime: new Date("2025-01-01T11:30:00Z")
     },
     {
       teamA: "Team C",
       teamB: "Team D",
       teamALogo: "https://picsum.photos/34",
       teamBLogo: "https://picsum.photos/35",
-      datetime: new Date("2024-04-13T08:30:00Z")
+      datetime: new Date("2025-02-02T13:30:00Z")
     },
     {
       teamA: "Team E",
       teamB: "Team F",
       teamALogo: "https://picsum.photos/36",
       teamBLogo: "https://picsum.photos/37",
-      datetime: new Date("2024-04-13T17:30:00Z")
+      datetime: new Date("2025-03-03T15:30:00Z")
+    },
+    {
+      teamA: "Team G",
+      teamB: "Team H",
+      teamALogo: "https://picsum.photos/38",
+      teamBLogo: "https://picsum.photos/39",
+      datetime: new Date("2025-04-04T17:30:00Z")
     },
   ]
-  const statistics = [
+  const statisticsData = [
     {
       "sport": "Basketball",
       "statistic": "3 Pointers",
@@ -89,14 +96,46 @@ function Homepage() {
         {"name": "Player 4", "value": 20},
       ]
     },
+    {
+      "sport": "Football",
+      "statistic": "Assists",
+      "standings": [
+        {"name": "Player 1", "value": 19},
+        {"name": "Player 2", "value": 18},
+        {"name": "Player 3", "value": 17},
+        {"name": "Player 4", "value": 16},
+      ]
+    },
+  ]
+  const newsData = [
+    {
+      "title": "League Starts Next Week",
+      "imageCard": "https://picsum.photos/800",
+      "date": new Date("2025-01-01"),
+      "tags": ["Basketball", "League"]
+    },
+    {
+      "title": "Player Moves To New Team",
+      "imageCard": "https://picsum.photos/801",
+      "date": new Date("2025-02-02"),
+      "tags": ["Football", "Transfers"]
+    },
+    {
+      "title": "Inter-school Competition Kicks Off",
+      "imageCard": "https://picsum.photos/802",
+      "date": new Date("2025-03-03"),
+      "tags": ["Football", "Basketball", "Volleyball"]
+    },
   ]
 
   // Options for displaying date and time
   let dateOptions: Intl.DateTimeFormatOptions = {
-		weekday: "long",
+		weekday: "short",
     day: "numeric",
 		month: "short",
 		year: "numeric",
+	};
+  let timeOptions: Intl.DateTimeFormatOptions = {
 		hour: "numeric",
 		minute: "numeric",
 	};
@@ -123,7 +162,9 @@ function Homepage() {
                 </div>
 
                 <div className="justify-self-end-safe">
-                  <p className="text-small">{ match.datetime.toLocaleString("en-US", dateOptions) }</p>
+                  <p className="text-small">
+                    { match.datetime.toLocaleDateString("en-UK", dateOptions) }, { match.datetime.toLocaleTimeString("en-US", timeOptions) }
+                  </p>
                 </div>
               </div>
             ))}
@@ -135,8 +176,8 @@ function Homepage() {
           <p className="text-xlarge">Statistics</p>
 
           <div className="flex flex-row gap-1">
-            { statistics.map((statistic, _) => (
-              <div className={ `flex-[${statistics.length.toString()}] p-1 bg-grey rounded-xl` }>
+            { statisticsData.map((statistic, _) => (
+              <div className={ `flex-1 p-1 bg-grey rounded-xl` }>
                 <p className="text-large">{ statistic.sport } - { statistic.statistic }</p>
                 
                 <ol className="list-inside list-decimal">
@@ -144,6 +185,30 @@ function Homepage() {
                     <li className="text-small">{ standing.name } - { standing.value }</li>
                   ))}
                 </ol>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Lastest News */}
+        <div className="p-1 bg-red rounded-xl">
+          <p className="text-xlarge">Lastest News</p>
+
+          <div className="flex flex-row gap-1">
+            { newsData.map((news, _) => (
+              <div className={ `flex-1 flex flex-col p-1 gap-1 bg-grey rounded-xl` }>
+                <img src={ news.imageCard } className="w-full aspect-3/1 object-cover rounded-xl"></img>
+                <p className="text-large">{ news.title }</p>
+                <div className="flex flex-row">
+                  <div className="flex flex-row gap-1.5">
+                    { news.tags.map((tag, _) => (
+                      <p className="text-small">{ tag }</p>
+                    )) }
+                  </div>
+                  <div className="ml-auto">
+                    <p className="text-small">{ news.date.toLocaleDateString("en-UK", dateOptions) }</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>

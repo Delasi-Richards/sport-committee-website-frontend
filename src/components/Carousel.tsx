@@ -53,7 +53,7 @@ function Carousel({ content }: CarouselProps) {
     <div className="relative">
 
       {/* The carousel contents */}
-      <div className="relative w-full h-[40vh] overflow-hidden">
+      <div className="relative w-full h-[50vh] overflow-hidden">
         <AnimatePresence>
           <motion.div
             key={ currentIndex }
