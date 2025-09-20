@@ -26,7 +26,7 @@ const slideVariants = {
   },
 };
 
-function Carousel({ content }: CarouselProps) {
+export function Carousel({ content }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   // const [direction, setDirection] = useState('left');
   
@@ -104,5 +104,3 @@ function Carousel({ content }: CarouselProps) {
     </div>
   )
 }
-
-export default Carousel

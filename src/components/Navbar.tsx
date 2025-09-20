@@ -1,4 +1,4 @@
-function Navbar() {
+export function Navbar() {
   return (
     <nav className="py-1 bg-red text-white">
       <div className="flex items-center justify-between">
@@ -13,21 +13,23 @@ function Navbar() {
             <a href="/football">Football</a>
             </li>
           <li>
-            <a href="#">Basketball</a>
+            <a href="/basketball">Basketball</a>
             </li>
           <li>
-            <a href="#">Volleyball</a>
+            <a href="/volleyball">Volleyball</a>
             </li>
         </ul>
-        <form className="flex ml-2 mr-5">
+
+        {/* Search bar */}
+        {/* Commented out until functionality is completed */}
+        {/* <form className="flex ml-2 mr-5">
           <input id="search" className="py-0.5 px-1 border border-white rounded-l-lg rounded-r-none focus:outline-none focus:bg-red-focus" type="search" placeholder="Search" aria-label="Search"/>
           <button className="p-0.5 border border-white border-l-0 rounded-l-none rounded-r-lg focus:bg-red-focus" type="submit" onClick={()=>{}}>
             <img src="src/assets/search-icon.svg" width="24" height="24" />
           </button>
-        </form>
+        </form> */}
+
       </div>
     </nav>
   )
 }
-
-export default Navbar

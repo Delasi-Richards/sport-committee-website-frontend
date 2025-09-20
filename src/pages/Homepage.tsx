@@ -1,9 +1,11 @@
 // Components
-import Navbar from "../components/Navbar"
-import Carousel from "../components/Carousel"
+import { Navbar, Carousel } from "../components"
+
+// Constants
+import { dateOptions, timeOptions } from "../constants"
 
 // Types
-import type { carouselContent, match } from "../types/common.types"
+import type { carouselContent, match } from "../types"
 
 function Homepage() {
 
@@ -23,6 +25,11 @@ function Homepage() {
       image: "https://images.pexels.com/photos/777059/pexels-photo-777059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       header: "Image 3",
       subHeader: "This is image 3"
+    },
+    {
+      image: "https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&w=600",
+      header: "Image 4",
+      subHeader: "This is image 4"
     }
   ]
   const upcomingMatchesData : match[] = [
@@ -128,18 +135,6 @@ function Homepage() {
     },
   ]
 
-  // Options for displaying date and time
-  let dateOptions: Intl.DateTimeFormatOptions = {
-		weekday: "short",
-    day: "numeric",
-		month: "short",
-		year: "numeric",
-	};
-  let timeOptions: Intl.DateTimeFormatOptions = {
-		hour: "numeric",
-		minute: "numeric",
-	};
-
   return (
     <>
       <Navbar />
@@ -153,8 +148,8 @@ function Homepage() {
           <p className="text-xlarge">Upcoming Matches</p>
 
           <div className="flex flex-col gap-1">
-            { upcomingMatchesData.map((match, _) => (
-              <div className="flex flex-row p-1 items-center-safe bg-grey rounded-xl">
+            { upcomingMatchesData.map((match, index) => (
+              <div key={ index } className="flex flex-row p-1 items-center-safe bg-grey rounded-xl">
                 <div className="flex flex-row mr-auto gap-1">
                   <img src={ match.teamALogo } width="32px" height="32px" alt={ match.teamA + "'s logo" } />
                   <p className="text-large">{ match.teamA } vs. { match.teamB }</p>
@@ -176,13 +171,13 @@ function Homepage() {
           <p className="text-xlarge">Statistics</p>
 
           <div className="flex flex-row gap-1">
-            { statisticsData.map((statistic, _) => (
-              <div className={ `flex-1 p-1 bg-grey rounded-xl` }>
+            { statisticsData.map((statistic, index) => (
+              <div key={ index } className={ `flex-1 p-1 bg-grey rounded-xl` }>
                 <p className="text-large">{ statistic.sport } - { statistic.statistic }</p>
                 
                 <ol className="list-inside list-decimal">
-                  { statistic.standings.map((standing, _) => (
-                    <li className="text-small">{ standing.name } - { standing.value }</li>
+                  { statistic.standings.map((standing, index) => (
+                    <li className="text-small" key={ index }>{ standing.name } - { standing.value }</li>
                   ))}
                 </ol>
               </div>
@@ -195,14 +190,14 @@ function Homepage() {
           <p className="text-xlarge">Lastest News</p>
 
           <div className="flex flex-row gap-1">
-            { newsData.map((news, _) => (
-              <div className={ `flex-1 flex flex-col p-1 gap-1 bg-grey rounded-xl` }>
+            { newsData.map((news, index) => (
+              <div key={ index } className={ `flex-1 flex flex-col p-1 gap-1 bg-grey rounded-xl` }>
                 <img src={ news.imageCard } className="w-full aspect-3/1 object-cover rounded-xl"></img>
                 <p className="text-large">{ news.title }</p>
                 <div className="flex flex-row">
                   <div className="flex flex-row gap-1.5">
-                    { news.tags.map((tag, _) => (
-                      <p className="text-small">{ tag }</p>
+                    { news.tags.map((tag, index) => (
+                      <p key={ index } className="text-small">{ tag }</p>
                     )) }
                   </div>
                   <div className="ml-auto">
