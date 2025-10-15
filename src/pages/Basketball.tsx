@@ -1,88 +1,13 @@
 // Components
-import { Navbar } from "../components"
+import { Navbar } from "../components";
 
 // Constants
-import { dateOptions, basketballIntroText } from "../constants"
+import { dateOptions, basketballIntroText } from "../constants";
+
+// Mock Data
+import { basketballLeagueTableData, basketballNewsData, basketballStatisticsData } from "../constants";
 
 function BasketballPage() {
-
-  // Temporary placeholder data. Replace with API calls to Sanity
-  const leagueTableData = [
-    {
-      name: "Team A",
-      W: "0",
-      L: "0",
-      W_PCT: "0%",
-      GB: "0",
-      STRK: "W0"
-    },
-    {
-      name: "Team B",
-      W: "0",
-      L: "0",
-      W_PCT: "0%",
-      GB: "0",
-      STRK: "W0"
-    },
-    {
-      name: "Team C",
-      W: "0",
-      L: "0",
-      W_PCT: "0%",
-      GB: "0",
-      STRK: "W0"
-    },
-    {
-      name: "Team D",
-      W: "0",
-      L: "0",
-      W_PCT: "0%",
-      GB: "0",
-      STRK: "W0"
-    }
-  ]
-  const statisticsData = [
-    {
-      "sport": "Basketball",
-      "statistic": "Points",
-      "standings": [
-        {"name": "Player 1", "team": "Team", "value": 23},
-        {"name": "Player 2", "team": "Team", "value": 21},
-        {"name": "Player 3", "team": "Team", "value": 19},
-        {"name": "Player 4", "team": "Team", "value": 15},
-      ]
-    },
-    {
-      "sport": "Basketball",
-      "statistic": "3-Pointers",
-      "standings": [
-        {"name": "Player 1", "team": "Team", "value": 19},
-        {"name": "Player 2", "team": "Team", "value": 18},
-        {"name": "Player 3", "team": "Team", "value": 17},
-        {"name": "Player 4", "team": "Team", "value": 16},
-      ]
-    }
-  ]
-  const newsData = [
-    {
-      "title": "League Starts Next Week",
-      "imageCard": "https://picsum.photos/800",
-      "date": new Date("2025-01-01"),
-      "tags": ["Basketball", "League"]
-    },
-    {
-      "title": "Player Moves To New Team",
-      "imageCard": "https://picsum.photos/801",
-      "date": new Date("2025-02-02"),
-      "tags": ["Basketball", "Transfers"]
-    },
-    {
-      "title": "Inter-school Competition Kicks Off",
-      "imageCard": "https://picsum.photos/802",
-      "date": new Date("2025-03-03"),
-      "tags": ["Football", "Basketball", "Volleyball"]
-    },
-  ]
 
   return (
     <>
@@ -124,7 +49,7 @@ function BasketballPage() {
                 </tr>
               </thead>
               <tbody>
-                { leagueTableData.map((team, index) => (
+                { basketballLeagueTableData.map((team, index) => (
                   <tr key={ index } className="flex flex-row pr-1 border-t-1 border-white">
                     <td className="p-1 mr-auto">{ team.name }</td>
                     <td className="p-1 w-2/25 text-center">{ team.W }</td>
@@ -142,7 +67,7 @@ function BasketballPage() {
           <div className="flex-auto p-1 bg-red rounded-xl">
             <p className="text-xlarge">Stat Leaders</p>
             <div className="flex flex-row gap-1">
-              { statisticsData.map((statistic, index) => (
+              { basketballStatisticsData.map((statistic, index) => (
                 <div key={ index } className={ `flex-1 p-1 h-full bg-grey rounded-xl` }>
                   <p className="text-large">{ statistic.statistic }</p>
                   <ul className="flex flex-col gap-1">
@@ -169,7 +94,7 @@ function BasketballPage() {
         <div className="p-1 bg-red rounded-xl">
           <p className="text-xlarge">Lastest News</p>
           <div className="flex flex-row gap-1">
-            { newsData.map((news, index) => (
+            { basketballNewsData.map((news, index) => (
               <div key={ index } className={ `flex-1 flex flex-col p-1 gap-1 bg-grey rounded-xl` }>
                 <img src={ news.imageCard } className="w-full aspect-3/1 object-cover rounded-xl"></img>
                 <p className="text-large">{ news.title }</p>

@@ -4,81 +4,10 @@ import { Navbar } from "../components"
 // Constants
 import { dateOptions, volleyballIntroText } from "../constants"
 
-function VolleyballPage() {
+// Mock Data
+import { volleyballLeagueTableData, volleyballNewsData, volleyballStatisticsData } from "../constants"
 
-  // Temporary placeholder data. Replace with API calls to Sanity
-  const leagueTableData = [
-    {
-      name: "Team A",
-      MP: "0",
-      W: "0",
-      L: "0",
-      SETS: "0"
-    },
-    {
-      name: "Team B",
-      MP: "0",
-      W: "0",
-      L: "0",
-      SETS: "0"
-    },
-    {
-      name: "Team C",
-      MP: "0",
-      W: "0",
-      L: "0",
-      SETS: "0"
-    },
-    {
-      name: "Team D",
-      MP: "0",
-      W: "0",
-      L: "0",
-      SETS: "0"
-    }
-  ]
-  const statisticsData = [
-    {
-      "sport": "Volleyball",
-      "statistic": "Attacks",
-      "standings": [
-        {"name": "Player 1", "team": "Team", "value": 23},
-        {"name": "Player 2", "team": "Team", "value": 21},
-        {"name": "Player 3", "team": "Team", "value": 19},
-        {"name": "Player 4", "team": "Team", "value": 15},
-      ]
-    },
-    {
-      "sport": "Volleyball",
-      "statistic": "Digs",
-      "standings": [
-        {"name": "Player 1", "team": "Team", "value": 19},
-        {"name": "Player 2", "team": "Team", "value": 18},
-        {"name": "Player 3", "team": "Team", "value": 17},
-        {"name": "Player 4", "team": "Team", "value": 16},
-      ]
-    }
-  ]
-  const newsData = [
-    {
-      "title": "League Starts Next Week",
-      "imageCard": "https://picsum.photos/800",
-      "date": new Date("2025-01-01"),
-      "tags": ["Volleyball", "League"]
-    },
-    {
-      "title": "Player Moves To New Team",
-      "imageCard": "https://picsum.photos/801",
-      "date": new Date("2025-02-02"),
-      "tags": ["Volleyball", "Transfers"]
-    },
-    {
-      "title": "Inter-school Competition Kicks Off",
-      "imageCard": "https://picsum.photos/802",
-      "date": new Date("2025-03-03"),
-      "tags": ["Football", "Basketball", "Volleyball"]
-    },
-  ]
+function VolleyballPage() {
 
   return (
     <>
@@ -119,7 +48,7 @@ function VolleyballPage() {
                 </tr>
               </thead>
               <tbody>
-                { leagueTableData.map((team, index) => (
+                { volleyballLeagueTableData.map((team, index) => (
                   <tr key={ index } className="flex flex-row pr-1 border-t-1 border-white">
                     <td className="p-1 mr-auto">{ team.name }</td>
                     <td className="p-1 w-2/25 text-center">{ team.MP }</td>
@@ -136,7 +65,7 @@ function VolleyballPage() {
           <div className="flex-auto p-1 bg-red rounded-xl">
             <p className="text-xlarge">Stat Leaders</p>
             <div className="flex flex-row gap-1">
-              { statisticsData.map((statistic, index) => (
+              { volleyballStatisticsData.map((statistic, index) => (
                 <div key={ index } className={ `flex-1 p-1 h-full bg-grey rounded-xl` }>
                   <p className="text-large">{ statistic.statistic }</p>
                   <ul className="flex flex-col gap-1">
@@ -163,7 +92,7 @@ function VolleyballPage() {
         <div className="p-1 bg-red rounded-xl">
           <p className="text-xlarge">Lastest News</p>
           <div className="flex flex-row gap-1">
-            { newsData.map((news, index) => (
+            { volleyballNewsData.map((news, index) => (
               <div key={ index } className={ `flex-1 flex flex-col p-1 gap-1 bg-grey rounded-xl` }>
                 <img src={ news.imageCard } className="w-full aspect-3/1 object-cover rounded-xl"></img>
                 <p className="text-large">{ news.title }</p>

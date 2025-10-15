@@ -1,122 +1,13 @@
 // Components
-import { Navbar } from "../components"
+import { Navbar } from "../components";
 
 // Constants
-import { dateOptions, footballIntroText } from "../constants"
+import { dateOptions, footballIntroText } from "../constants";
+
+// Mock Data
+import { footballLeagueTableData, footballNewsData, footballStatisticsData } from "../constants";
 
 function FootballPage() {
-
-  // Temporary placeholder data. Replace with API calls to Sanity
-  const leagueTableData = [
-    {
-      name: "Dragons",
-      MP: "0",
-      W: "0",
-      D: "0",
-      L: "0",
-      GF: "0",
-      GA: "0",
-      GD: "0",
-      PTS: "0"
-    },
-    {
-      name: "Elites",
-      MP: "0",
-      W: "0",
-      D: "0",
-      L: "0",
-      GF: "0",
-      GA: "0",
-      GD: "0",
-      PTS: "0"
-    },
-    {
-      name: "Falcons",
-      MP: "0",
-      W: "0",
-      D: "0",
-      L: "0",
-      GF: "0",
-      GA: "0",
-      GD: "0",
-      PTS: "0"
-    },
-    {
-      name: "Lions",
-      MP: "0",
-      W: "0",
-      D: "0",
-      L: "0",
-      GF: "0",
-      GA: "0",
-      GD: "0",
-      PTS: "0"
-    },
-    {
-      name: "Vikings",
-      MP: "0",
-      W: "0",
-      D: "0",
-      L: "0",
-      GF: "0",
-      GA: "0",
-      GD: "0",
-      PTS: "0"
-    },
-    {
-      name: "Warriors",
-      MP: "0",
-      W: "0",
-      D: "0",
-      L: "0",
-      GF: "0",
-      GA: "0",
-      GD: "0",
-      PTS: "0"
-    }
-  ]
-  const statisticsData = [
-    {
-      "sport": "Football",
-      "statistic": "Goals",
-      "standings": [
-        {"name": "Player 1", "team": "Team", "value": 23},
-        {"name": "Player 2", "team": "Team", "value": 21},
-        {"name": "Player 3", "team": "Team", "value": 19},
-        {"name": "Player 4", "team": "Team", "value": 15},
-      ]
-    },
-    {
-      "sport": "Football",
-      "statistic": "Assists",
-      "standings": [
-        {"name": "Player 1", "team": "Team", "value": 19},
-        {"name": "Player 2", "team": "Team", "value": 18},
-        {"name": "Player 3", "team": "Team", "value": 17},
-        {"name": "Player 4", "team": "Team", "value": 16},
-      ]
-    }
-  ]
-  const newsData = [
-    {
-      "title": "League Starts Next Week",
-      "imageCard": "https://picsum.photos/800",
-      "date": new Date("2025-01-01"),
-      "tags": ["Football", "League"]
-    },
-    {
-      "title": "Player Moves To New Team",
-      "imageCard": "https://picsum.photos/801",
-      "date": new Date("2025-02-02"),
-      "tags": ["Football", "Transfers"]
-    },
-    {
-      "title": "Inter-school Competition Kicks Off",
-      "imageCard": "https://picsum.photos/802",
-      "date": new Date("2025-03-03"),
-      "tags": ["Football", "Basketball", "Volleyball"]
-    },
-  ]
 
   return (
     <>
@@ -161,7 +52,7 @@ function FootballPage() {
                 </tr>
               </thead>
               <tbody>
-                { leagueTableData.map((team, index) => (
+                { footballLeagueTableData.map((team, index) => (
                   <tr key={ index } className="flex flex-row pr-1 border-t-1 border-white">
                     <td className="p-1 mr-auto">{ team.name }</td>
                     <td className="p-1 w-7/100 text-center">{ team.MP }</td>
@@ -182,7 +73,7 @@ function FootballPage() {
           <div className="flex-auto p-1 bg-red rounded-xl">
             <p className="text-xlarge">Stat Leaders</p>
             <div className="flex flex-row gap-1">
-              { statisticsData.map((statistic, index) => (
+              { footballStatisticsData.map((statistic, index) => (
                 <div key={ index } className={ `flex-1 p-1 h-full bg-grey rounded-xl` }>
                   <p className="text-large">{ statistic.statistic }</p>
                   <ul className="flex flex-col gap-1">
@@ -209,7 +100,7 @@ function FootballPage() {
         <div className="p-1 bg-red rounded-xl">
           <p className="text-xlarge">Lastest News</p>
           <div className="flex flex-row gap-1">
-            { newsData.map((news, index) => (
+            { footballNewsData.map((news, index) => (
               <div key={ index } className={ `flex-1 flex flex-col p-1 gap-1 bg-grey rounded-xl` }>
                 <img src={ news.imageCard } className="w-full aspect-3/1 object-cover rounded-xl"></img>
                 <p className="text-large">{ news.title }</p>
