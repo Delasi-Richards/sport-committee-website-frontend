@@ -129,80 +129,20 @@ export const homeNewsData = [
 
 // Football
 export const footballTeams = [
-  "Dragons",
-  "Elites",
-  "Falcons",
-  "Lions",
-  "Vikings",
-  "Warriors"
+  { "name": "Dragons", "logo": "https://picsum.photos/832", "sport": "Football" },
+  { "name": "Elites", "logo": "https://picsum.photos/833", "sport": "Football" },
+  { "name": "Falcons", "logo": "https://picsum.photos/834", "sport": "Football" },
+  { "name": "Lions", "logo": "https://picsum.photos/835", "sport": "Football" },
+  { "name": "Vikings", "logo": "https://picsum.photos/836", "sport": "Football" },
+  { "name": "Warriors", "logo": "https://picsum.photos/837", "sport": "Football" }
 ]
 export const footballLeagueTableData = [
-  {
-    name: "Dragons",
-    MP: "0",
-    W: "0",
-    D: "0",
-    L: "0",
-    GF: "0",
-    GA: "0",
-    GD: "0",
-    PTS: "0"
-  },
-  {
-    name: "Elites",
-    MP: "0",
-    W: "0",
-    D: "0",
-    L: "0",
-    GF: "0",
-    GA: "0",
-    GD: "0",
-    PTS: "0"
-  },
-  {
-    name: "Falcons",
-    MP: "0",
-    W: "0",
-    D: "0",
-    L: "0",
-    GF: "0",
-    GA: "0",
-    GD: "0",
-    PTS: "0"
-  },
-  {
-    name: "Lions",
-    MP: "0",
-    W: "0",
-    D: "0",
-    L: "0",
-    GF: "0",
-    GA: "0",
-    GD: "0",
-    PTS: "0"
-  },
-  {
-    name: "Vikings",
-    MP: "0",
-    W: "0",
-    D: "0",
-    L: "0",
-    GF: "0",
-    GA: "0",
-    GD: "0",
-    PTS: "0"
-  },
-  {
-    name: "Warriors",
-    MP: "0",
-    W: "0",
-    D: "0",
-    L: "0",
-    GF: "0",
-    GA: "0",
-    GD: "0",
-    PTS: "0"
-  }
+  { name: "Dragons", MP: "0", W: "0", D: "0", L: "0", GF: "0", GA: "0", GD: "0", PTS: "0" },
+  { name: "Elites", MP: "0", W: "0", D: "0", L: "0", GF: "0", GA: "0", GD: "0", PTS: "0" },
+  { name: "Falcons", MP: "0", W: "0", D: "0", L: "0", GF: "0", GA: "0", GD: "0", PTS: "0" },
+  { name: "Lions", MP: "0", W: "0", D: "0", L: "0", GF: "0", GA: "0", GD: "0", PTS: "0" },
+  { name: "Vikings", MP: "0", W: "0", D: "0", L: "0", GF: "0", GA: "0", GD: "0", PTS: "0" },
+  { name: "Warriors", MP: "0", W: "0", D: "0", L: "0", GF: "0", GA: "0", GD: "0", PTS: "0" }
 ]
 export const footballStatisticsData = [
   {
@@ -249,44 +189,16 @@ export const footballNewsData = [
 
 // Basketball
 export const basketballTeams = [
-  "Grim Reapers",
-  "Olympus",
-  "Snipers",
-  "Veterans"
+  { "name": "Grim Reapers", "logo": "https://picsum.photos/840", "sport": "Basketball" },
+  { "name": "Olympus", "logo": "https://picsum.photos/841", "sport": "Basketball" },
+  { "name": "Snipers", "logo": "https://picsum.photos/842", "sport": "Basketball" },
+  { "name": "Veterans", "logo": "https://picsum.photos/843", "sport": "Basketball" }
 ]
 export const basketballLeagueTableData = [
-  {
-    name: "Grim Reapers",
-    W: "0",
-    L: "0",
-    W_PCT: "0%",
-    GB: "0",
-    STRK: "W0"
-  },
-  {
-    name: "Olympus",
-    W: "0",
-    L: "0",
-    W_PCT: "0%",
-    GB: "0",
-    STRK: "W0"
-  },
-  {
-    name: "Snipers",
-    W: "0",
-    L: "0",
-    W_PCT: "0%",
-    GB: "0",
-    STRK: "W0"
-  },
-  {
-    name: "Veterans",
-    W: "0",
-    L: "0",
-    W_PCT: "0%",
-    GB: "0",
-    STRK: "W0"
-  }
+  { name: "Grim Reapers", W: "0", L: "0", W_PCT: "0%", GB: "0", STRK: "W0" },
+  { name: "Olympus", W: "0", L: "0", W_PCT: "0%", GB: "0", STRK: "W0" },
+  { name: "Snipers", W: "0", L: "0", W_PCT: "0%", GB: "0", STRK: "W0" },
+  { name: "Veterans", W: "0", L: "0", W_PCT: "0%", GB: "0", STRK: "W0" }
 ]
 export const basketballStatisticsData = [
   {
@@ -332,7 +244,10 @@ export const basketballNewsData = [
 ]
 
 // Volleyball
-export const volleyballTeams = []
+export const volleyballTeams = [
+  { "name": "Team A", "logo": "https://picsum.photos/838", "sport": "Volleyball" },
+  { "name": "Team B", "logo": "https://picsum.photos/839", "sport": "Volleyball" }
+]
 export const volleyballLeagueTableData = [
   {
     name: "Team A",

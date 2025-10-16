@@ -1,13 +1,13 @@
 // Components
-import { Navbar, Carousel } from "../components"
+import { Navbar, Carousel } from "../../components"
 
 // Constants
-import { dateOptions, timeOptions } from "../constants"
+import { dateOptions, timeOptions } from "../../constants"
 
 // Mock Data
-import { homeCarouselData, homeUpcomingMatchesData, homeStatisticsData, homeNewsData } from "../constants"
+import { homeCarouselData, homeUpcomingMatchesData, homeStatisticsData, homeNewsData } from "../../constants"
 
-function Homepage() {
+export function Homepage() {
 
   return (
     <>
@@ -88,5 +88,3 @@ function Homepage() {
     </>
   )
 }
-
-export default Homepage

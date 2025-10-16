@@ -1,12 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router';
 
 // Pages
-import Homepage from "./pages/Homepage.js"
-import FootballPage from './pages/Football.js';
-import BasketballPage from './pages/Basketball.js';
-import VolleyballPage from './pages/Volleyball.js';
+import { Homepage, FootballPage, BasketballPage, VolleyballPage } from './pages';
+import { TeamsPage } from './pages';
 
-function App () {
+export function App () {
   return (
     <Router>
       <Routes>
@@ -14,9 +12,8 @@ function App () {
         <Route path="/football" element={<FootballPage />} />
         <Route path="/basketball" element={<BasketballPage />} />
         <Route path="/volleyball" element={<VolleyballPage />} />
+        <Route path="/:sport/teams" element={<TeamsPage />} />
       </Routes>
     </Router>
   );
 };
-
-export default App;

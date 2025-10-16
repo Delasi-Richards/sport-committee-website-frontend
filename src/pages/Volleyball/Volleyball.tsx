@@ -1,13 +1,13 @@
 // Components
-import { Navbar } from "../components";
+import { Navbar } from "../../components"
 
 // Constants
-import { dateOptions, footballIntroText } from "../constants";
+import { dateOptions, volleyballIntroText } from "../../constants"
 
 // Mock Data
-import { footballLeagueTableData, footballNewsData, footballStatisticsData } from "../constants";
+import { volleyballLeagueTableData, volleyballNewsData, volleyballStatisticsData } from "../../constants"
 
-function FootballPage() {
+export function VolleyballPage() {
 
   return (
     <>
@@ -17,18 +17,18 @@ function FootballPage() {
 
         {/* Intro */}
         <div className="relative w-full h-[90vh] overflow-hidden">
-          <img src="src/assets/football.jpg" className="size-full rounded-xl object-cover" />
+          <img src="src/assets/volleyball.jpg" className="size-full rounded-xl object-cover" />
           <div className="absolute bottom-1/9 left-0 right-0 mx-auto p-2 w-9/10 justify-items-center-safe bg-red rounded-xl">
             <p className="mb-2 text-large text-center">
-              { footballIntroText }
+              { volleyballIntroText }
             </p>
-            <ol className="flex flex-row w-full gap-2 justify-evenly">
-              <li className="text-medium">Fixtures</li>
-              <li className="text-medium">Statistics</li>
-              <li className="text-medium">News</li>
-              <li className="text-medium">Teams</li>
-              <li className="text-medium">Players</li>
-            </ol>
+            <div className="flex flex-row w-full gap-2 justify-evenly">
+              <a href="#" className="text-medium">Fixtures</a>
+              <a href="#" className="text-medium">Statistics</a>
+              <a href="#" className="text-medium">News</a>
+              <a href="/volleyball/teams" className="text-medium">Teams</a>
+              <a href="#" className="text-medium">Players</a>
+            </div>
           </div>
         </div>
 
@@ -41,28 +41,20 @@ function FootballPage() {
               <thead>
                 <tr className="flex flex-row pr-1">
                   <th className="p-1 mr-auto font-normal">Team</th>
-                  <th className="p-1 w-7/100 font-normal text-center">MP</th>
-                  <th className="p-1 w-7/100 font-normal text-center">W</th>
-                  <th className="p-1 w-7/100 font-normal text-center">D</th>
-                  <th className="p-1 w-7/100 font-normal text-center">L</th>
-                  <th className="p-1 w-7/100 font-normal text-center">GF</th>
-                  <th className="p-1 w-7/100 font-normal text-center">GA</th>
-                  <th className="p-1 w-7/100 font-normal text-center">GD</th>
-                  <th className="p-1 w-7/100 font-normal text-center">PTS</th>
+                  <th className="p-1 w-2/25 font-normal text-center">MP</th>
+                  <th className="p-1 w-2/25 font-normal text-center">W</th>
+                  <th className="p-1 w-2/25 font-normal text-center">L</th>
+                  <th className="p-1 w-2/25 font-normal text-center">SETS</th>
                 </tr>
               </thead>
               <tbody>
-                { footballLeagueTableData.map((team, index) => (
+                { volleyballLeagueTableData.map((team, index) => (
                   <tr key={ index } className="flex flex-row pr-1 border-t-1 border-white">
                     <td className="p-1 mr-auto">{ team.name }</td>
-                    <td className="p-1 w-7/100 text-center">{ team.MP }</td>
-                    <td className="p-1 w-7/100 text-center">{ team.W }</td>
-                    <td className="p-1 w-7/100 text-center">{ team.D }</td>
-                    <td className="p-1 w-7/100 text-center">{ team.L }</td>
-                    <td className="p-1 w-7/100 text-center">{ team.GF }</td>
-                    <td className="p-1 w-7/100 text-center">{ team.GA }</td>
-                    <td className="p-1 w-7/100 text-center">{ team.GD }</td>
-                    <td className="p-1 w-7/100 text-center">{ team.PTS }</td>
+                    <td className="p-1 w-2/25 text-center">{ team.MP }</td>
+                    <td className="p-1 w-2/25 text-center">{ team.W }</td>
+                    <td className="p-1 w-2/25 text-center">{ team.L }</td>
+                    <td className="p-1 w-2/25 text-center">{ team.SETS }</td>
                   </tr>
                 ))}
               </tbody>
@@ -73,7 +65,7 @@ function FootballPage() {
           <div className="flex-auto p-1 bg-red rounded-xl">
             <p className="text-xlarge">Stat Leaders</p>
             <div className="flex flex-row gap-1">
-              { footballStatisticsData.map((statistic, index) => (
+              { volleyballStatisticsData.map((statistic, index) => (
                 <div key={ index } className={ `flex-1 p-1 h-full bg-grey rounded-xl` }>
                   <p className="text-large">{ statistic.statistic }</p>
                   <ul className="flex flex-col gap-1">
@@ -100,7 +92,7 @@ function FootballPage() {
         <div className="p-1 bg-red rounded-xl">
           <p className="text-xlarge">Lastest News</p>
           <div className="flex flex-row gap-1">
-            { footballNewsData.map((news, index) => (
+            { volleyballNewsData.map((news, index) => (
               <div key={ index } className={ `flex-1 flex flex-col p-1 gap-1 bg-grey rounded-xl` }>
                 <img src={ news.imageCard } className="w-full aspect-3/1 object-cover rounded-xl"></img>
                 <p className="text-large">{ news.title }</p>
@@ -120,8 +112,7 @@ function FootballPage() {
         </div>
 
       </div>
+
     </>
   )
 }
-
-export default FootballPage
