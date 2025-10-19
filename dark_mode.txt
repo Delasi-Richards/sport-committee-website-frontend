@@ -1,0 +1,5 @@
+The current dark mode layout is only available for the homepage.
+The main background is grey, with white text.
+All sections use grey backgrounds with red borders (3px width, same corner radius as before).
+The nav-bar is still red to separate it from the rest of the page.
+For items, on hover, the background changes from grey to red

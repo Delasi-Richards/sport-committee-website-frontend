@@ -13,17 +13,17 @@ export function Homepage() {
     <>
       <Navbar />
 
-      <div className="flex flex-col p-1 gap-1">
+      <div className="flex flex-col p-1 gap-1 bg-grey">
         {/* Carousel */}
         <Carousel content={ homeCarouselData } />
 
         {/* Upcoming Matches */}
-        <div className="p-1 bg-red rounded-xl">
+        <div className="p-1 bg-grey border-3 border-red rounded-xl">
           <p className="text-xlarge">Upcoming Matches</p>
 
           <div className="flex flex-col gap-1">
             { homeUpcomingMatchesData.map((match, index) => (
-              <div key={ index } className="flex flex-row p-1 items-center-safe bg-grey rounded-xl">
+              <div key={ index } className="flex flex-row p-1 items-center-safe bg-grey hover:bg-red border-3 border-red rounded-xl ">
                 <div className="flex flex-row mr-auto gap-1">
                   <img src={ match.teamALogo } width="32px" height="32px" alt={ match.teamA + "'s logo" } />
                   <p className="text-large">{ match.teamA } vs. { match.teamB }</p>
@@ -41,12 +41,12 @@ export function Homepage() {
         </div>
           
         {/* Statistics */}
-        <div className="p-1 bg-red rounded-xl">
+        <div className="p-1 bg-grey border-3 border-red rounded-xl">
           <p className="text-xlarge">Statistics</p>
 
           <div className="flex flex-row gap-1">
             { homeStatisticsData.map((statistic, index) => (
-              <div key={ index } className={ `flex-1 p-1 bg-grey rounded-xl` }>
+              <div key={ index } className={ `flex-1 p-1 bg-grey hover:bg-red border-3 border-red rounded-xl` }>
                 <p className="text-large">{ statistic.sport } - { statistic.statistic }</p>
                 
                 <ol className="list-inside list-decimal">
@@ -60,12 +60,12 @@ export function Homepage() {
         </div>
 
         {/* Lastest News */}
-        <div className="p-1 bg-red rounded-xl">
+        <div className="p-1 bg-grey border-3 border-red rounded-xl">
           <p className="text-xlarge">Lastest News</p>
 
           <div className="flex flex-row gap-1">
             { homeNewsData.map((news, index) => (
-              <div key={ index } className={ `flex-1 flex flex-col p-1 gap-1 bg-grey rounded-xl` }>
+              <div key={ index } className={ `flex-1 flex flex-col p-1 gap-1 bg-grey hover:bg-red border-3 border-red rounded-xl` }>
                 <img src={ news.imageCard } className="w-full aspect-3/1 object-cover rounded-xl" />
                 <p className="text-large">{ news.title }</p>
                 <div className="flex flex-row">

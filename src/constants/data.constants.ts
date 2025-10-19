@@ -124,7 +124,7 @@ export const homeNewsData = [
     "imageCard": "https://picsum.photos/802",
     "date": new Date("2025-03-03"),
     "tags": ["Football", "Basketball", "Volleyball"]
-  },
+  }
 ]
 
 // Football

@@ -53,8 +53,14 @@
   width: 32px;
   align-content: center;
   justify-items: center;
-  background-color: var(--color-red);
+  background-color: var(--color-grey);
   border-radius: 5px;
+
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-red);
+    }
+  }
 }
 .carouselButtonLeft {
   left: 1%;

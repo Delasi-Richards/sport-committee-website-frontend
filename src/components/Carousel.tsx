@@ -50,7 +50,7 @@ export function Carousel({ content }: CarouselProps) {
   };
 
   return (
-    <div className="relative">
+    <div className="relative border-3 border-red rounded-xl">
 
       {/* The carousel contents */}
       <div className="relative w-full h-[50vh] overflow-hidden">
@@ -63,8 +63,8 @@ export function Carousel({ content }: CarouselProps) {
             exit="exit"
             className="size-full object-cover"
           >
-            <img src={ content[currentIndex].image } className="size-full rounded-xl object-cover" />
-            <div className="absolute bottom-1/9 left-0 right-0 mx-auto py-1 h-10 w-40 justify-items-center-safe text-white bg-red rounded-xl">
+            <img src={ content[currentIndex].image } className="size-full object-cover rounded-xl" />
+            <div className="absolute bottom-1/9 left-0 right-0 mx-auto py-1 h-10 w-40 justify-items-center-safe text-white bg-grey border-3 border-red rounded-xl">
               <p className="text-xlarge">{ content[currentIndex].header }</p>
               <p className="text-medium">{ content[currentIndex].subHeader }</p>
             </div>
@@ -94,7 +94,7 @@ export function Carousel({ content }: CarouselProps) {
         {content.map((_, index) => (
           <div
             key={index}
-            className={`w-3 h-1 rounded-xl ${currentIndex === index ? "bg-red" : "bg-white"}`}
+            className={`w-3 h-1 rounded-xl ${currentIndex === index ? "bg-red" : "bg-grey hover:bg-red"}`}
             onClick={() => handleDotClick(index)}
           >
           </div>
