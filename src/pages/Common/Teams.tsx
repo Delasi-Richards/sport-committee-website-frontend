@@ -36,34 +36,17 @@ export function TeamsPage() {
     <>
       <Navbar />
       <div className="flex flex-col p-1 gap-1">
-
-        {/* <div className="relative w-full h-[90vh] overflow-hidden">
-          <img src="/football.jpg" className="size-full rounded-xl object-cover" />
-          <div className="absolute top-0 left-0 right-0 mx-auto p-1 justify-items-center-safe rounded-xl grid grid-cols-3 gap-1">
-            { teams?.map((team, index) => (
-              <div key={ index } className="flex flex-col p-1 gap-1 bg-red rounded-xl">
-                <img src={ team.logo } className="w-full aspect-3/1 object-cover rounded-xl" />
-                <div>
-                  <p className="text-large">{ team.name }</p>
-                  <p className="text-small">{ team.sport }</p>
-                </div>
-              </div>
-            )) }
-          </div>
-        </div> */}
-
         <div className="grid grid-cols-3 gap-1 p-1 rounded-xl">
           { teams?.map((team, index) => (
             <div key={ index } className="flex flex-col p-1 gap-1 bg-red rounded-xl">
-              <img src={ team.logo } className="w-full aspect-3/1 object-cover rounded-xl"></img>
+              <img src={ team.logo } className="w-full aspect-3/1 object-cover rounded-xl" />
               <div>
-              <p className="text-large">{ team.name }</p>
-              <p className="text-small">{ team.sport }</p>
+                <p className="text-large">{ team.name }</p>
+                <p className="text-small">{ team.sport }</p>
               </div>
             </div>
           )) }
         </div>
-
       </div>
     </>
   )

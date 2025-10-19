@@ -66,7 +66,7 @@ export function Homepage() {
           <div className="flex flex-row gap-1">
             { homeNewsData.map((news, index) => (
               <div key={ index } className={ `flex-1 flex flex-col p-1 gap-1 bg-grey rounded-xl` }>
-                <img src={ news.imageCard } className="w-full aspect-3/1 object-cover rounded-xl"></img>
+                <img src={ news.imageCard } className="w-full aspect-3/1 object-cover rounded-xl" />
                 <p className="text-large">{ news.title }</p>
                 <div className="flex flex-row">
                   <div className="flex flex-row gap-1.5">

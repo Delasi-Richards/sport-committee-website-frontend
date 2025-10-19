@@ -25,7 +25,7 @@ export function BasketballPage() {
             <div className="flex flex-row w-full gap-2 justify-evenly">
               <a href="#" className="text-medium">Fixtures</a>
               <a href="#" className="text-medium">Statistics</a>
-              <a href="#" className="text-medium">News</a>
+              <a href="/basketball/news" className="text-medium">News</a>
               <a href="/basketball/teams" className="text-medium">Teams</a>
               <a href="#" className="text-medium">Players</a>
             </div>

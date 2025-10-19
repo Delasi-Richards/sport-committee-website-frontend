@@ -185,6 +185,12 @@ export const footballNewsData = [
     "date": new Date("2025-03-03"),
     "tags": ["Football", "Basketball", "Volleyball"]
   },
+  {
+    "title": "Team Wins 10-0",
+    "imageCard": "https://picsum.photos/803",
+    "date": new Date("2025-04-04"),
+    "tags": ["Football", "Team"]
+  },
 ]
 
 // Basketball
