@@ -17,7 +17,7 @@ export function FootballPage() {
 
         {/* Intro */}
         <div className="relative w-full h-[90vh] overflow-hidden">
-          <img src="src/assets/football.jpg" className="size-full rounded-xl object-cover" />
+          <img src="/football/football.jpg" className="size-full rounded-xl object-cover" />
           <div className="absolute bottom-1/9 left-0 right-0 mx-auto p-2 w-9/10 justify-items-center-safe bg-red rounded-xl">
             <p className="mb-2 text-large text-center">
               { footballIntroText }
