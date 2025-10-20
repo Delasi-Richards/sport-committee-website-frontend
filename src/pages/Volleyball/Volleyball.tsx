@@ -23,7 +23,7 @@ export function VolleyballPage() {
               { volleyballIntroText }
             </p>
             <div className="flex flex-row w-full gap-2 justify-evenly">
-              <a href="#" className="text-medium">Fixtures</a>
+              <a href="/volleyball/matches" className="text-medium">Fixtures</a>
               <a href="#" className="text-medium">Statistics</a>
               <a href="/volleyball/news" className="text-medium">News</a>
               <a href="/volleyball/teams" className="text-medium">Teams</a>

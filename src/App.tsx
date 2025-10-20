@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router';
 
 // Pages
 import { Homepage, FootballPage, BasketballPage, VolleyballPage } from './pages';
-import { TeamsPage, NewsPage } from './pages';
+import { TeamsPage, NewsPage, MatchesPage } from './pages';
 
 export function App () {
   return (
@@ -14,6 +14,7 @@ export function App () {
         <Route path="/volleyball" element={<VolleyballPage />} />
         <Route path="/:sport/teams" element={<TeamsPage />} />
         <Route path="/:sport/news" element={<NewsPage />} />
+        <Route path="/:sport/matches" element={<MatchesPage />} />
       </Routes>
     </Router>
   );

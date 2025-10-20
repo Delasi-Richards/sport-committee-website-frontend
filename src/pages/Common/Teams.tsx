@@ -4,6 +4,9 @@ import { useParams } from "react-router";
 // Components
 import { Navbar } from "../../components";
 
+// Types
+import type { team } from "../../types";
+
 // Mock Data
 import { footballTeams, basketballTeams, volleyballTeams } from "../../constants";
 
@@ -11,7 +14,7 @@ export function TeamsPage() {
   let params = useParams();
   const sport = params.sport
 
-  const [teams, setTeams] = useState<any[]>([]);
+  const [teams, setTeams] = useState<team[]>([]);
 
   useEffect(() => {
     let selectedTeams: any[];

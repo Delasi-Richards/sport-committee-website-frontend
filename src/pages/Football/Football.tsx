@@ -23,7 +23,7 @@ export function FootballPage() {
               { footballIntroText }
             </p>
             <div className="flex flex-row w-full gap-2 justify-evenly">
-              <a href="#" className="text-medium">Fixtures</a>
+              <a href="/football/matches" className="text-medium">Fixtures</a>
               <a href="#" className="text-medium">Statistics</a>
               <a href="/football/news" className="text-medium">News</a>
               <a href="/football/teams" className="text-medium">Teams</a>

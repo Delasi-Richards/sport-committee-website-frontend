@@ -192,6 +192,64 @@ export const footballNewsData = [
     "tags": ["Football", "Team"]
   },
 ]
+export const footballMatchData = [
+  {
+    teamA: "Rovers",
+    teamB: "Titans",
+    teamALogo: "https://picsum.photos/40",
+    teamBLogo: "https://picsum.photos/41",
+    datetime: new Date("2025-05-12T09:15:00Z")
+  },
+  {
+    teamA: "United",
+    teamB: "Celtics",
+    teamALogo: "https://picsum.photos/42",
+    teamBLogo: "https://picsum.photos/43",
+    datetime: new Date("2025-06-23T18:45:00Z")
+  },
+  {
+    teamA: "Panthers",
+    teamB: "Strikers",
+    teamALogo: "https://picsum.photos/44",
+    teamBLogo: "https://picsum.photos/45",
+    datetime: new Date("2025-07-04T14:00:00Z")
+  },
+  {
+    teamA: "Comets",
+    teamB: "Thunder",
+    teamALogo: "https://picsum.photos/46",
+    teamBLogo: "https://picsum.photos/47",
+    datetime: new Date("2025-08-19T20:30:00Z")
+  },
+  {
+    teamA: "Vanguards",
+    teamB: "Cyclones",
+    teamALogo: "https://picsum.photos/48",
+    teamBLogo: "https://picsum.photos/49",
+    datetime: new Date("2025-09-07T12:00:00Z")
+  },
+  {
+    teamA: "Barracudas",
+    teamB: "Hornets",
+    teamALogo: "https://picsum.photos/50",
+    teamBLogo: "https://picsum.photos/51",
+    datetime: new Date("2025-10-30T16:20:00Z")
+  },
+  {
+    teamA: "Sentinels",
+    teamB: "Blazers",
+    teamALogo: "https://picsum.photos/52",
+    teamBLogo: "https://picsum.photos/53",
+    datetime: new Date("2025-11-15T07:05:00Z")
+  },
+  {
+    teamA: "Avalanche",
+    teamB: "Sharps",
+    teamALogo: "https://picsum.photos/54",
+    teamBLogo: "https://picsum.photos/55",
+    datetime: new Date("2025-12-21T21:50:00Z")
+  }
+]
 
 // Basketball
 export const basketballTeams = [
@@ -247,6 +305,64 @@ export const basketballNewsData = [
     "date": new Date("2025-03-03"),
     "tags": ["Football", "Basketball", "Volleyball"]
   },
+]
+export const basketballMatchData = [
+  {
+    teamA: "Grim Reapers",
+    teamB: "Olympus",
+    teamALogo: "https://picsum.photos/80",
+    teamBLogo: "https://picsum.photos/81",
+    datetime: new Date("2025-05-12T09:15:00Z")
+  },
+  {
+    teamA: "Snipers",
+    teamB: "Veterans",
+    teamALogo: "https://picsum.photos/82",
+    teamBLogo: "https://picsum.photos/83",
+    datetime: new Date("2025-06-23T18:45:00Z")
+  },
+  {
+    teamA: "Olympus",
+    teamB: "Grim Reapers",
+    teamALogo: "https://picsum.photos/84",
+    teamBLogo: "https://picsum.photos/85",
+    datetime: new Date("2025-07-04T14:00:00Z")
+  },
+  {
+    teamA: "Veterans",
+    teamB: "Snipers",
+    teamALogo: "https://picsum.photos/86",
+    teamBLogo: "https://picsum.photos/87",
+    datetime: new Date("2025-08-19T20:30:00Z")
+  },
+  {
+    teamA: "Snipers",
+    teamB: "Olympus",
+    teamALogo: "https://picsum.photos/88",
+    teamBLogo: "https://picsum.photos/89",
+    datetime: new Date("2025-09-07T12:00:00Z")
+  },
+  {
+    teamA: "Grim Reapers",
+    teamB: "Veterans",
+    teamALogo: "https://picsum.photos/90",
+    teamBLogo: "https://picsum.photos/91",
+    datetime: new Date("2025-10-30T16:20:00Z")
+  },
+  {
+    teamA: "Veterans",
+    teamB: "Olympus",
+    teamALogo: "https://picsum.photos/92",
+    teamBLogo: "https://picsum.photos/93",
+    datetime: new Date("2025-11-15T07:05:00Z")
+  },
+  {
+    teamA: "Snipers",
+    teamB: "Grim Reapers",
+    teamALogo: "https://picsum.photos/94",
+    teamBLogo: "https://picsum.photos/95",
+    datetime: new Date("2025-12-21T21:50:00Z")
+  }
 ]
 
 // Volleyball
@@ -326,3 +442,4 @@ export const volleyballNewsData = [
     "tags": ["Football", "Basketball", "Volleyball"]
   },
 ]
+export const volleyballMatchData = []
