@@ -28,8 +28,28 @@ export type news = {
   tags: string[]
 }
 
+export type sport = {
+  id: string,
+  name: string,
+  teams?: team[]
+}
+
 export type team = {
+  id: string,
   name: string,
   logo: string,
-  sport: string
+  coach?: string,
+  sportsId: string,
+  division: string,
+  players?: player[],
+  sports: sport
+}
+
+export type player = {
+  id: string,
+  name: string,
+  positions: string[],
+  jerseyNumber: number,
+  teamId: string,
+  team: team
 }

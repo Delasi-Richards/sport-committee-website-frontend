@@ -7,8 +7,9 @@ import { Navbar } from "../../components";
 // Types
 import type { team } from "../../types";
 
-// Mock Data
-import { footballTeams, basketballTeams, volleyballTeams } from "../../constants";
+// Service
+import { GetTeams } from "../../service";
+
 
 export function TeamsPage() {
   let params = useParams();
@@ -17,22 +18,7 @@ export function TeamsPage() {
   const [teams, setTeams] = useState<team[]>([]);
 
   useEffect(() => {
-    let selectedTeams: any[];
-    switch (sport) {
-      case "football":
-        selectedTeams = footballTeams;
-        break;
-      case "basketball":
-        selectedTeams = basketballTeams;
-        break;
-      case "volleyball":
-        selectedTeams = volleyballTeams;
-        break;
-      default:
-        selectedTeams = [...footballTeams, ...basketballTeams, ...volleyballTeams];
-        break;
-    }
-    setTeams(selectedTeams);
+    GetTeams(setTeams);
   }, [sport]);
 
   return (
@@ -45,7 +31,7 @@ export function TeamsPage() {
               <img src={ team.logo } className="w-full aspect-3/1 object-cover rounded-xl" />
               <div>
                 <p className="text-large">{ team.name }</p>
-                <p className="text-small">{ team.sport }</p>
+                <p className="text-small">{ team.sports.name }</p>
               </div>
             </div>
           )) }
