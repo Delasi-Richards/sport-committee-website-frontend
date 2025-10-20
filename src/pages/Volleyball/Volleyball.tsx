@@ -27,7 +27,7 @@ export function VolleyballPage() {
               <a href="#" className="text-medium">Statistics</a>
               <a href="/volleyball/news" className="text-medium">News</a>
               <a href="/volleyball/teams" className="text-medium">Teams</a>
-              <a href="#" className="text-medium">Players</a>
+              <a href="/volleyball/players" className="text-medium">Players</a>
             </div>
           </div>
         </div>

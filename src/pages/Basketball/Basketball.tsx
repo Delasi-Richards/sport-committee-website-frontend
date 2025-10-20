@@ -27,7 +27,7 @@ export function BasketballPage() {
               <a href="#" className="text-medium">Statistics</a>
               <a href="/basketball/news" className="text-medium">News</a>
               <a href="/basketball/teams" className="text-medium">Teams</a>
-              <a href="#" className="text-medium">Players</a>
+              <a href="/basketball/players" className="text-medium">Players</a>
             </div>
           </div>
         </div>

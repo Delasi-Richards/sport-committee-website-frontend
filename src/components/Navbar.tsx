@@ -1,4 +1,17 @@
+import { useEffect } from "react"
+
 export function Navbar() {
+
+  // Used to keep the backend alive on Render.
+  // Remove when backend moves to a more proper deployment.
+    useEffect(() => {
+      const interval = setInterval(() => {
+      fetch("https://gdg-acity-sports.onrender.com");
+      }, 60000);
+
+      return () => clearInterval(interval);
+    }, []);
+
   return (
     <nav className="py-1 bg-red text-white">
       <div className="flex items-center justify-between">
