@@ -23,7 +23,8 @@ export function BasketballPage() {
               { basketballIntroText }
             </p>
             <div className="flex flex-row w-full gap-2 justify-evenly">
-              <a href="/basketball/matches" className="text-medium">Fixtures</a>
+              <a href="/basketball/matches" className="text-medium">Matches</a>
+              <a href="#" className="text-medium">League Table</a>
               <a href="#" className="text-medium">Statistics</a>
               <a href="/basketball/news" className="text-medium">News</a>
               <a href="/basketball/teams" className="text-medium">Teams</a>

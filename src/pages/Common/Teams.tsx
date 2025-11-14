@@ -27,13 +27,15 @@ export function TeamsPage() {
       <div className="flex flex-col p-1 gap-1">
         <div className="grid grid-cols-3 gap-1 p-1 rounded-xl">
           { teams?.map((team, index) => (
-            <div key={ index } className="flex flex-col p-1 gap-1 bg-red rounded-xl">
-              <img src={ team.logo } className="w-full aspect-3/1 object-cover rounded-xl" />
-              <div>
-                <p className="text-large">{ team.name }</p>
-                <p className="text-small">{ team.sports.name }</p>
+            <a href={ `/${sport}/teams/${team.id}` }>
+              <div key={ index } className="flex flex-col p-1 gap-1 bg-red rounded-xl">
+                <img src={ team.logo } className="w-full aspect-3/1 object-cover rounded-xl" />
+                <div>
+                  <p className="text-large">{ team.name }</p>
+                  <p className="text-small">{ team.sports.name }</p>
+                </div>
               </div>
-            </div>
+            </a>
           )) }
         </div>
       </div>
