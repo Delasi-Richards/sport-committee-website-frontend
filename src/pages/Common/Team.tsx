@@ -7,7 +7,7 @@ import type { team } from "../../types";
 
 export function TeamPage() {
   let params = useParams();
-  const teamID = params.sportsID || "";
+  const teamID = params.teamID || "";
 
   const [team, setTeam] = useState<team>();
 
@@ -34,7 +34,7 @@ export function TeamPage() {
           <p className="text-xlarge">Players</p>
           <div className="grid grid-cols-3 gap-1 rounded-xl">
             { team?.players?.map((player, index) => (
-              <a href="#">
+              <a href={ `/${team.sports.name}/players/${player.id}` }>
                 <div key={ index } className="flex flex-col p-1 gap-1 bg-grey rounded-xl">
                   <img src={ team.logo } className="w-full aspect-3/1 object-cover rounded-xl"/>
                   <div>

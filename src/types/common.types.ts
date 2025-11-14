@@ -51,5 +51,6 @@ export type player = {
   positions: string[],
   jerseyNumber: number,
   teamId: string,
-  team: team
+  team: team,
+  stats: any[]
 }

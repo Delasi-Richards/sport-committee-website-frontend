@@ -109,3 +109,34 @@ export async function GetPlayers(setPlayers: (players: player[]) => void) {
     console.error(err);
   }
 }
+
+export async function GetPlayer(playerID: string, setPlayer: (player: player) => void) {
+  try {
+    const res = await fetch(`${backend_url}players/${playerID}`, {
+      method: "GET",
+      headers: { "Content-Type": "application/json" },
+    });
+
+    if (!res.ok) throw new Error(`Request failed: ${res.status} ${res.statusText}`);
+
+    try {
+      const raw = await res.json();
+      const player: player = {
+        id: raw.data.id,
+        name: raw.data.name,
+        positions: raw.data.positions,
+        jerseyNumber: raw.data.jerseyNumber,
+        teamId: raw.data.teamId,
+        team: raw.data.team,
+        stats: raw.data.stats
+      };
+      setPlayer(player);
+    }
+    catch (err) {
+      throw new Error("Unable to parse response: " + err);
+    }
+  }
+  catch (err) {
+    console.error(err);
+  }
+}
